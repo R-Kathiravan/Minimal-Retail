@@ -17,6 +17,7 @@
 
  body {
      animation: fadeIn 0.8s ease-out;
+     overflow-x: hidden;
  }
 
  h1,
@@ -34,15 +35,17 @@
      margin-top: 0;
  }
 
- img {
+ /* img {
      max-width: 100%;
      height: auto;
- }
+ } */
 
  .container {
      max-width: 1200px;
      margin: 0 auto;
-     padding: 0 5%;
+     padding: 10px 5%;
+    overflow-x: hidden;
+    height: fit-content;
 
  }
 
@@ -132,7 +135,11 @@
      /* opacity: 0; */
      /* animation: fadeInUp 0.8s ease-out 0.2s forwards; */
  }
-
+@media (max-width:678px) {
+    .about-hero{
+        height: auto;
+    }
+}
  .about-hero h1 {
      font-size: 3rem;
      font-weight: 700;
@@ -160,6 +167,7 @@
 
  .split-image img {
      border-radius: 8px;
+     width: 100%;
      background-color: #f7f7f7;
      transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
  }
@@ -279,7 +287,11 @@
      display: flex;
      align-items: center;
  }
-
+@media (max-width:678px) {
+    #values{
+        height: auto;
+    }
+}
  #values-grid .grid-item-simple {
      background-color: #FFFFFF;
      border-radius: 8px;

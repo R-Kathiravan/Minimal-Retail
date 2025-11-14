@@ -114,6 +114,10 @@ header {
     display: none;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 .btn-close {
     display: none;
 }
@@ -195,6 +199,16 @@ header {
         color: #b82e5e;
     }
 
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .mobile-nav .material-icons {
+        color: white;
+    }
+
 }
 
 .hero-slider {
@@ -259,6 +273,12 @@ header {
     margin: 0 0 1rem 0;
 }
 
+@media (max-width:478px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
 .hero-content p {
     font-size: 1.15rem;
     line-height: 1.6;
@@ -278,6 +298,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .shop-btn:hover {
@@ -748,6 +769,11 @@ header {
 }
 
 #cart-count {
+    position: absolute;
+    top: -20px;
+    color: rgb(255, 99, 125);
+}
+#cart-count1 {
     position: absolute;
     top: -20px;
     color: rgb(255, 99, 125);
