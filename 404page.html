@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page || Minimal Retail</title>
+    <link rel="stylesheet" href="shared.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        /* --- 1. PREMIUM TYPOGRAPHY & BASE --- */
+        :root {
+            /* Use a brand accent color (e.g., from your 'About' page) */
+            --color-brand: #007bff;
+            --color-text-dark: #222222;
+            --color-text-light: #555555;
+        }
+
+        /* --- 2. THE 404 SECTION --- */
+        .error-page {
+            /* This vertically centers the content on the whole screen */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Assumes header is 80px tall. Use 100vh if no header */
+            min-height: calc(100vh - 160px);
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .error-container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* --- 3. PREMIUM TYPOGRAPHY --- */
+        .error-container h1 {
+            font-size: 2.5rem;
+            /* Large and in charge */
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin: 0 0 15px 0;
+        }
+
+        .error-container .subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--color-text-dark);
+            margin: 0 0 25px 0;
+        }
+
+        .error-container p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 0 0 20px 0;
+        }
+
+        /* --- 4. PREMIUM "ACTION" LINKS --- */
+        .error-actions {
+            margin: 40px 0;
+            display: flex;
+            flex-direction: column;
+            /* Stack the links */
+            align-items: center;
+            /* Center them */
+            gap: 15px;
+            /* Space between links */
+        }
+
+        .error-link {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-brand);
+            /* Your brand's accent color */
+
+            /* This creates a "premium" underline */
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+            /* Space between text and line */
+
+            transition: all 0.2s ease-out;
+        }
+
+        .error-link:hover {
+            color: var(--color-text-dark);
+            /* Darken on hover */
+        }
+
+        /* --- 5. FINAL MESSAGE --- */
+        .final-message {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--color-text-light);
+            margin-top: 30px;
+        }
+    </style>
+    <div class="menu-header">
+        <div class="menu">
+            <a href="index.html" class="logo"><img src="./assets/stackly-logo1.png" alt="stackly-logo"></a>
+            <div class="menu-items">
+                <a href="index.html">Home </a>
+                <a href="">About</a>
+                <a href="product.html">Products</a>
+                <a href="">Contact</a>
+                <div class="menu-icons-items">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="material-icons">login</span>
+                </div>
+                <div class="btn-close">X</div>
+            </div>
+            <div class="menu-icons">
+                <a href="cart.html" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span id="cart-count">0</span>
+                </a>
+                <span class="material-icons">login</span>
+            </div>
+            <div class="hamburger">
+                &#9776
+            </div>
+        </div>
+    </div>
+    <section class="error-page">
+        <div class="error-container">
+
+            <h1>404 — Page Not Found </h1>
+
+            <p class="subtitle">Oops! The page you're trying to reach isn't available right now.</p>
+            <div class="error-actions">
+                <a href="index.html" class="error-link"> Return to the Home Page</a>
+                <a href="product.html" class="error-link"> Explore all Products</a>
+                <a href="cart.html" class="error-link"> Visit your Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Stackly</h3>
+                <p>Delivering innovation through simplicity. Explore premium electronics crafted for performance,
+                    quality, and style.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <p><span class="material-icons">call</span> +91 98765 43210</p>
+                <p><span class="material-icons">email</span> info@thestackly.com</p>
+                <p><span class="material-icons">location_on</span> Salem, Tamil Nadu</p>
+            </div>
+            <div class="footer-section social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><span class="material-icons">facebook</span></a>
+                    <a href="#"><span class="material-icons">alternate_email</span></a>
+                    <a href="#"><span class="material-icons">smart_display</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Stackly. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

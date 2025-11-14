@@ -1,0 +1,447 @@
+ :root {
+     --color-blue: #007bff;
+     --color-green: #28a745;
+     --color-orange: #fd7e14;
+     --color-purple: #6f42c1;
+     --color-red: #dc3545;
+     --color-brown: #8B4513;
+     --color-text-dark: #222222;
+     --color-text-light: #555555;
+     --color-bg-light: #f9f9f9;
+     --color-border: #eeeeee;
+ }
+
+ html {
+     /* scroll-behavior: smooth; */
+ }
+
+ body {
+
+     /* -webkit-font-smoothing: antialiased; */
+     animation: fadeIn 0.8s ease-out;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     color: var(--color-text-dark);
+     margin-top: 0;
+ }
+
+ p {
+     line-height: 1.7;
+     margin-top: 0;
+ }
+
+ img {
+     max-width: 100%;
+     height: auto;
+ }
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 5%;
+
+ }
+
+ .container-narrow {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 0 5%;
+ }
+
+ .about-section {
+     padding: 80px 0;
+     border-top: 1px solid var(--color-border);
+     opacity: 0;
+     animation: fadeInUp 0.8s ease-out forwards;
+ }
+
+ .bg-light {
+     background-color: var(--color-bg-light);
+ }
+
+ h2 {
+     font-size: 2.25rem;
+     font-weight: 600;
+     margin-bottom: 20px;
+     position: relative;
+     padding-left: 15px;
+ }
+
+ h2::before {
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 5px;
+     height: 30px;
+     border-radius: 2px;
+ }
+
+ #story h2::before {
+     background-color: var(--color-green);
+ }
+
+ #mission h2::before {
+     background-color: var(--color-orange);
+ }
+
+ #offer h2::before {
+     background-color: var(--color-purple);
+ }
+
+ #why-us h2::before {
+     background-color: var(--color-red);
+ }
+
+ #values h2::before {
+     background-color: var(--color-brown);
+ }
+
+ #contact h2::before {
+     background-color: var(--color-blue);
+ }
+
+ .layout-centered h2,
+ .layout-centered .section-subtitle {
+     text-align: center;
+ }
+
+ .layout-centered h2 {
+     padding-left: 0;
+     /* No accent for centered titles */
+ }
+
+ .layout-centered h2::before {
+     display: none;
+     /* Hide accent */
+ }
+
+
+ /* --- 4. "ABOUT" (HERO SECTION) --- */
+ .about-hero {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.648)), url('./assets/about-hero.webp');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     padding: 80px 0 60px 0;
+     text-align: center;
+     height: 50vh;
+     /* opacity: 0; */
+     /* animation: fadeInUp 0.8s ease-out 0.2s forwards; */
+ }
+
+ .about-hero h1 {
+     font-size: 3rem;
+     /* Bigger */
+     font-weight: 700;
+     margin-bottom: 20px;
+     color: var(--color-blue);
+     /* Color for the main heading */
+ }
+
+ .about-hero .subtitle {
+     font-size: 1.25rem;
+     font-weight: 500;
+     color: rgb(228, 226, 226);
+     margin-bottom: 20px;
+ }
+
+ .about-hero p {
+     color: #e7f3ff;
+ }
+
+ /* --- 5. 2-COLUMN SPLIT LAYOUT --- */
+ .layout-split .container {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 60px;
+     align-items: center;
+ }
+
+ .split-image img {
+     border-radius: 8px;
+     background-color: #f7f7f7;
+     /* Hover animation */
+     transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+ }
+
+ .split-image img:hover {
+     transform: scale(1.03);
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .layout-reverse .split-image {
+     order: 2;
+ }
+
+ .layout-reverse .split-text {
+     order: 1;
+ }
+
+ /* --- 6. STYLED LISTS --- */
+ .styled-list {
+     list-style: none;
+     padding-left: 0;
+ }
+
+ .styled-list li {
+     position: relative;
+     padding-left: 30px;
+     margin-bottom: 12px;
+     font-size: 1rem;
+     font-weight: 500;
+ }
+
+ .styled-list li::before {
+     content: '✔';
+     position: absolute;
+     left: 0;
+     top: 0;
+     font-weight: 600;
+ }
+
+ /* Color-coded checkmarks */
+ .list-green li::before {
+     color: var(--color-green);
+ }
+
+ .list-orange li::before {
+     color: var(--color-orange);
+ }
+
+ /* --- 7. "WHAT WE OFFER" (PURPLE) --- */
+ .offer-list {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 15px 30px;
+     text-align: left;
+     list-style: none;
+     padding-left: 0;
+     margin: 30px 0;
+ }
+
+ .offer-list li {
+     position: relative;
+     padding-left: 30px;
+     font-weight: 500;
+ }
+
+ .offer-list li::before {
+     content: '✔';
+     position: absolute;
+     left: 0;
+     top: 0;
+     color: var(--color-purple);
+     /* Purple checkmark */
+     font-weight: 600;
+ }
+
+ .choose-bg {
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.304);
+
+ }
+
+ /* --- 8. GRID LAYOUTS ("Why Us" & "Values") --- */
+ .section-subtitle {
+     text-align: center;
+     font-size: 1.1rem;
+     max-width: 600px;
+     margin: -10px auto 50px auto;
+     /* Pull up */
+ }
+
+ .grid-container {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+ }
+
+ /* "Why Choose Us" Card (Red) */
+ #why-choose-us-grid .grid-item {
+     background-color: #FFFFFF;
+     padding: 30px;
+     border: 1px solid var(--color-border);
+     border-radius: 8px;
+     transition: all 0.3s ease-out;
+ }
+
+ #why-choose-us-grid .grid-item:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+ }
+
+ #why-choose-us-grid .grid-item h4 {
+     font-size: 1.15rem;
+     margin-bottom: 10px;
+ }
+
+ #why-choose-us-grid .icon-check {
+     color: var(--color-red);
+     /* Red checkmark */
+     font-weight: 600;
+     margin-right: 8px;
+ }
+
+ #values {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+ }
+
+ /* "Our Values" Card (Brown) */
+ #values-grid .grid-item-simple {
+     background-color: #FFFFFF;
+     border-radius: 8px;
+     padding: 25px;
+     transition: all 0.3s ease-out;
+ }
+
+ #values-grid .grid-item-simple:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+ }
+
+ #values-grid .grid-item-simple h4 {
+     font-size: 1.15rem;
+     margin-bottom: 10px;
+     color: var(--color-brown);
+     /* Brown heading */
+ }
+
+ /* --- 9. "CONTACT US" (Blue) --- */
+ #contact {
+     background: linear-gradient(160deg, #faf4f6b3, #fffafab3);
+     /* margin: 6%; */
+     /* background-attachment: fixed; */
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+
+ }
+
+ .contact-box {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+     margin-top: 50px;
+
+ }
+
+ .contact-item {
+     border: 1px solid var(--color-border);
+     border-radius: 8px;
+     padding: 30px;
+     text-align: center;
+     background-color: #FFFFFF;
+     transition: all 0.3s ease-out;
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.156);
+ }
+
+ .contact-item:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 8px 25px rgba(0, 38, 255, 0.304);
+ }
+
+ .contact-item .material-icons {
+     font-size: 2.5rem;
+     color: var(--color-blue);
+     /* Blue icon */
+     margin-bottom: 15px;
+ }
+
+ .contact-item h4 {
+     font-size: 1.15rem;
+     margin-bottom: 5px;
+ }
+
+ .contact-item p {
+     margin: 0;
+     font-weight: 500;
+ }
+
+ .contact-item a {
+     text-decoration: none;
+     font-weight: 500;
+     color: var(--color-text-light);
+ }
+
+ .contact-item a:hover {
+     color: var(--color-blue);
+ }
+
+ /* --- 10. ANIMATIONS --- */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* --- 11. RESPONSIVE --- */
+ @media (max-width: 900px) {
+     .layout-split .container {
+         grid-template-columns: 1fr;
+     }
+
+     .layout-reverse .split-image {
+         order: 1;
+     }
+
+     .grid-container {
+         grid-template-columns: 1fr 1fr;
+     }
+
+     .contact-box {
+         grid-template-columns: 1fr 1fr;
+     }
+ }
+
+ @media (max-width: 600px) {
+     h2 {
+         font-size: 1.8rem;
+     }
+
+     .about-hero h1 {
+         font-size: 2.25rem;
+     }
+
+     .about-hero .subtitle {
+         font-size: 1.1rem;
+     }
+
+     .offer-list {
+         grid-template-columns: 1fr;
+     }
+
+     .grid-container {
+         grid-template-columns: 1fr;
+     }
+
+     .contact-box {
+         grid-template-columns: 1fr;
+     }
+ }

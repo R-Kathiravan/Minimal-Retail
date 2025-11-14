@@ -1,0 +1,303 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+body{
+    padding-top: 100px;
+}
+ 
+.menu-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+
+}
+
+.logo img {
+    width: 180px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+}
+
+.menu-items a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #212121;
+    transition: all 0.3s ease-in;
+}
+
+.menu-items a:hover {
+    color: #000000;
+    transform: scale(1.07)
+}
+
+.menu-icons {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.material-icons {
+    font-size: 28px;
+    color: #333;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.menu-icons-items {
+    display: none;
+}
+
+.btn-close {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width:678px) {
+    .menu-items {
+        display: none;
+    }
+
+    .menu-icons {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+
+    .menu-items {
+        display: none;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        background: #0e0d0dcc;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        width: 180px;
+        /* height: 100%; */
+        padding: 60px 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+
+    }
+
+    .menu-items a {
+        color: rgb(215, 212, 212);
+    }
+
+    .menu-items a:hover {
+        color: #f8f9fa;
+    }
+
+    .menu-items button {
+        color: rgb(255, 255, 255);
+    }
+
+    .btn-close {
+        display: block;
+        cursor: pointer;
+        color: #ff0000;
+        top: 10%;
+        font-weight: 900;
+        right: 30%;
+        position: absolute;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+        color: var(--black);
+
+    }
+
+    .menu-items.show {
+        right: -30px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    .hamburger:hover {
+        color: #b82e5e;
+    }
+
+}
+
+
+/* --- 1. The Main Footer Container --- */
+
+.footer {
+    /* Use an "off-black" for a premium feel */
+    background-color: #1a1a1a;
+    color: #a0a0a0;
+    /* A soft, light gray for text */
+    padding: 60px 5% 0 5%;
+    /* Padding top/sides, no bottom yet */
+    font-size: 0.9rem;
+    /* 14px-15px */
+}
+
+/* --- 2. The 4-Column Content Grid --- */
+
+.footer-content {
+    display: grid;
+    /* Create the 4-column layout */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    /* Space between columns */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Center the content */
+    padding-bottom: 40px;
+}
+
+/* --- 3. General Section Styling --- */
+
+.footer-section h3,
+.footer-section h4 {
+    font-size: 1.1rem;
+    /* 18px */
+    font-weight: 600;
+    color: #FFFFFF;
+    /* White headings */
+    margin: 0 0 20px 0;
+}
+
+.footer-section p {
+    line-height: 1.7;
+    margin: 0 0 10px 0;
+}
+
+/* --- 4. Section 1: About --- */
+
+.footer-section.about h3 {
+    font-size: 1.3rem;
+    /* Make the brand name slightly larger */
+    margin-bottom: 15px;
+}
+
+ 
+.footer-section.links ul {
+    list-style: none;
+     padding: 0;
+    margin: 0;
+}
+
+.footer-section.links li {
+    margin-bottom: 12px;
+}
+
+.footer-section.links a {
+    text-decoration: none;
+    color: #a0a0a0;
+    transition: color 0.3s ease;
+}
+
+.footer-section.links a:hover {
+    color: #FFFFFF;
+ }
+
+ 
+.footer-section.contact p {
+    display: flex;
+    /* Use flex to align icon and text */
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.footer-section.contact .material-icons {
+    font-size: 1.2rem;
+    /* 19px */
+    margin-right: 10px;
+    color: #FFFFFF;
+    /* Make icons stand out a bit */
+}
+
+/* --- 7. Section 4: Social Icons --- */
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    /* Space between icons */
+}
+
+.social-icons span {
+    text-decoration: none;
+    /* color: #a0a0a0; */
+    font-size: 1.5rem;
+    color: wheat !important;
+    /* 24px */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons span:hover {
+    color: #FFFFFF;
+    transform: scale(1.1);
+}
+
+/* --- 8. The Copyright Bar --- */
+
+.footer-bottom {
+    text-align: center;
+    padding: 25px 0;
+    /* A subtle line to separate it */
+    border-top: 1px solid #333333;
+    font-size: 0.85rem;
+    /* 13px */
+    color: #888888;
+}
+
+/* --- 9. Responsive (For Mobile) --- */
+
+@media (max-width: 992px) {
+    .footer-content {
+        /* Stack to 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        /* Stack to 1 column on small phones */
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section {
+        /* Add space between stacked sections */
+        margin-bottom: 20px;
+    }
+}
+
+.cart-link{
+    position: relative;
+}
+#cart-count{
+    position: absolute;
+    top: -20px;
+    color: rgb(255, 99, 125);
+}

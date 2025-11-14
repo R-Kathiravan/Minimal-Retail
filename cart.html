@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart || Minimal Retail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="shared.css" />
+</head>
+
+<body>
+
+    <div class="menu-header">
+        <div class="menu">
+            <a href="index.html" class="logo"><img src="./assets/stackly-logo1.png" alt="stackly-logo"></a>
+            <div class="menu-items">
+                <a href="index.html">Home </a>
+                <a href="">About</a>
+                <a href="product.html">Products</a>
+                <a href="">Contact</a>
+                <div class="menu-icons-items">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="material-icons">login</span>
+                </div>
+                <div class="btn-close">X</div>
+            </div>
+            <div class="menu-icons">
+                <a href="cart.html" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span id="cart-count">0</span>
+                </a>
+                <span class="material-icons">login</span>
+            </div>
+            <div class="hamburger">
+                &#9776
+            </div>
+        </div>
+    </div>
+    <section class="cart">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-container" id="cart-items"></div>
+        <div class="cart-summary" id="cart-summary"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about" data-aos="fade-up" data-aos-delay="200">
+                <h3>Stackly</h3>
+                <p>Delivering innovation through simplicity. Explore premium electronics crafted for performance,
+                    quality, and style.</p>
+            </div>
+            <div class="footer-section links" data-aos="fade-up" data-aos-delay="300">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Us</h4>
+                <p><span class="material-icons">call</span> +91 98765 43210</p>
+                <p><span class="material-icons">email</span> info@thestackly.com</p>
+                <p><span class="material-icons">location_on</span> Salem, India</p>
+            </div>
+            <div class="footer-section social" data-aos="fade-up" data-aos-delay="500">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><span class="material-icons">facebook</span></a>
+                    <a href="#"><span class="material-icons">alternate_email</span></a>
+                    <a href="#"><span class="material-icons">smart_display</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Stackly. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="shared.js"></script>
+
+</body>
+
+</html>

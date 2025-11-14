@@ -1,0 +1,126 @@
+/* ===============================
+   CART PAGE STYLING
+=============================== */
+
+.cart {
+  padding: 120px 10%;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cart h2 {
+  text-align: center;
+  color: #00bcd4;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Cart Item Container */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Cart Items */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Product Image */
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Product Name */
+.cart-item h3 {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #222;
+  margin-left: 20px;
+}
+
+/* Price & Quantity */
+.cart-item p {
+  color: #00bcd4;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: #ff5252;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.remove-btn:hover {
+  background: #ff1744;
+  transform: scale(1.05);
+}
+
+/* Checkout Summary */
+.cart-summary {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.cart-summary p {
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #03a9f4;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .cart-item h3 {
+    margin: 10px 0;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+}

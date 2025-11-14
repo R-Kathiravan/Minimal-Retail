@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US || Minimal Retail</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="shared.css">
+</head>
+
+<body>
+    <div class="menu-header">
+        <div class="menu">
+            <a href="index.html" class="logo"><img src="./assets/stackly-logo1.png" alt="stackly-logo"></a>
+            <div class="menu-items">
+                <a href="index.html">Home </a>
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <div class="menu-icons-items">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="material-icons">login</span>
+                </div>
+                <div class="btn-close">X</div>
+            </div>
+            <div class="menu-icons">
+                <a href="cart.html" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span id="cart-count">0</span>
+                </a>
+                <span class="material-icons">login</span>
+            </div>
+            <div class="hamburger">
+                &#9776
+            </div>
+        </div>
+    </div>
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Contact US</h1>
+            <p>We're here to help you with anything you need. Whether you have questions, feedback, or need assistance
+                with
+                your order, our team is ready to support you.</p>
+            <p>Customer satisfaction is our top priority.
+                If you have any inquiries about our products, services, delivery, returns, or technical support, feel
+                free
+                to reach out — we respond quickly and professionally.</p>
+        </div>
+    </section>
+    <section class="contact">
+        <h1 class="contact-head">Keep In Touch With US</h1>
+        <div class="contact-cards" aria-label="Contact information">
+            <div class="contact-card contact-primary" data-aos="fade-left" data-aos-delay="200">
+                <div class="card-icon"><span class="material-icons">location_on</span></div>
+                <h3>Our Address</h3>
+                <p>Stackly<br /><i>Salem</i>, <br>Tamil Nadu, India</p>
+                <a href="https://maps.app.goo.gl/eGYJgqJSpWnrpyJU7" class="card-link" target="_blank"
+                    rel="noopener">View on
+                    map</a>
+            </div>
+
+            <div class="contact-card contact-secondary" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-icon"><span class="material-icons">email</span></div>
+                <h3>Email Us</h3>
+                <p><a href="mailto:info@thestackly.com">info@thestackly.com</a></p>
+                <p class="muted">We reply within 24 hours</p>
+            </div>
+
+            <div class="contact-card contact-accent"  data-aos="fade-down" data-aos-delay="400">
+                <div class="card-icon"><span class="material-icons">phone</span></div>
+                <h3>Call / WhatsApp</h3>
+                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p class="muted">Mon–Sat • 9:00 AM – 8:00 PM</p>
+            </div>
+
+            <div class="contact-card contact-info"  data-aos="fade" data-aos-delay="500">
+                <div class="card-icon"><span class="material-icons">schedule</span></div>
+                <h3>Working Hours</h3>
+                <ul class="hours">
+                    <li><strong>Mon – Sat:</strong> 9:00 AM – 8:00 PM</li>
+                    <li><strong>Sun:</strong> Closed</li>
+                    <li><strong>Holidays:</strong> Limited support</li>
+                </ul>
+            </div>
+
+            <div class="contact-card contact-social "  data-aos="zoom-in" data-aos-delay="600">
+                <div class="card-icon"><span class="material-icons">share</span></div>
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="404page.html" class="social" aria-label="Facebook"><span
+                            class="material-icons">facebook</span></a>
+                    <a href="404page.html" class="social" aria-label="Instagram"><span
+                            class="material-icons">camera_alt</span></a>
+                    <a href="404page.html" class="social" aria-label="Twitter"><span
+                            class="material-icons">close</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-form-section" data-aos="fade-up">
+        <div class="form-container">
+            <div id="form-success-message">
+                <span class="material-icons" style="font-size: 3rem; margin-bottom: 10px;">check_circle</span>
+                <h3>Thank you!</h3>
+                <!-- <p>Your message has been sent. We'll get back to you soon.</p> -->
+            </div>
+            <form id="contactForm" novalidate>
+                <h2>Get in Touch</h2>
+                <p class="form-subtitle">Have a question? We'd love to hear from you.</p>
+                <div class="form-group">
+                    <input type="text" id="name" class="form-input" placeholder=" " required>
+                    <label for="name" class="form-label">Full Name</label>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" class="form-input" placeholder=" " required>
+                    <label for="email" class="form-label">Email Address</label>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" class="form-input" placeholder=" ">
+                    <label for="subject" class="form-label">Subject (Optional)</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" class="form-input" placeholder=" " required></textarea>
+                    <label for="message" class="form-label">Your Message</label>
+                    <div class="error-message" id="message-error"></div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="material-icons" style="margin-right: 8px;">send</span>
+                    Send Message
+                </button>
+            </form>
+
+        </div>
+    </section>
+    <section class="contact-map" data-aos="zoom-in">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.9146091054317!2d78.17140487467015!3d11.682956588526352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e1!3m2!1sen!2sin!4v1763108035474!5m2!1sen!2sin"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long does delivery take?
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We usually ship your order within 24–48 hours, and delivery takes 3–7 working days depending on
+                        your location.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" data-aos="fade-down" data-aos-delay="200">
+                    What payment methods do you accept?
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We accept UPI, Net Banking, Debit/Credit Cards, and Cash on Delivery (COD) for eligible products.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" data-aos="fade-down" data-aos-delay="300">
+                    Can I return a product if I don't like it?
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we offer a 7-day easy return policy on most items. Simply contact our support team for
+                        assistance.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question"  data-aos="fade-down" data-aos-delay="400">
+                    Do your products come with warranty?
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="faq-answer">
+                    <p>All our electronics come with a standard manufacturer warranty, usually ranging from 6 months to
+                        1 year.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question"  data-aos="fade-down" data-aos-delay="500">
+                    How can I track my order?
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="faq-answer">
+                    <p>You can track your order from the 'Track Order' page using your order ID and mobile number.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about" data-aos="fade-up" data-aos-delay="200">
+                <h3>Stackly</h3>
+                <p>Delivering innovation through simplicity. Explore premium electronics crafted for performance,
+                    quality, and style.</p>
+            </div>
+            <div class="footer-section links" data-aos="fade-up" data-aos-delay="300">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Us</h4>
+                <p><span class="material-icons">call</span> +91 98765 43210</p>
+                <p><span class="material-icons">email</span> info@thestackly.com</p>
+                <p><span class="material-icons">location_on</span> Salem, India</p>
+            </div>
+            <div class="footer-section social" data-aos="fade-up" data-aos-delay="500">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><span class="material-icons">facebook</span></a>
+                    <a href="#"><span class="material-icons">alternate_email</span></a>
+                    <a href="#"><span class="material-icons">smart_display</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Stackly. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+            // once: true
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('form-success-message');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const nameError = document.getElementById('name-error');
+            const emailError = document.getElementById('email-error');
+            const messageError = document.getElementById('message-error');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const isFormValid = validateForm();
+                if (isFormValid) {
+                    console.log("Form is valid. Submitting...");
+                    contactForm.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    window.location.href='404page.html';
+                } else {
+                    console.log("Form is invalid.");
+                }
+            });
+
+            function validateForm() {
+                let isValid = true;
+
+                clearErrors();
+
+                if (nameInput.value.trim() === '') {
+                    showError(nameInput, nameError, 'Name is required');
+                    isValid = false;
+                }
+
+                if (emailInput.value.trim() === '') {
+                    showError(emailInput, emailError, 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(emailInput.value)) {
+                    showError(emailInput, emailError, 'Please enter a valid email address');
+                    isValid = false;
+                }
+
+                if (messageInput.value.trim().length < 10) {
+                    showError(messageInput, messageError, 'Message must be at least 10 characters long');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+
+            function showError(inputElement, errorElement, message) {
+                inputElement.classList.add('invalid');
+                errorElement.innerText = message;
+                errorElement.style.display = 'block';
+            }
+
+            function clearErrors() {
+                nameInput.classList.remove('invalid');
+                emailInput.classList.remove('invalid');
+                messageInput.classList.remove('invalid');
+                nameError.style.display = 'none';
+                emailError.style.display = 'none';
+                messageError.style.display = 'none';
+            }
+
+            function isValidEmail(email) {
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(email);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const faqs = document.querySelectorAll(".faq-item");
+
+            faqs.forEach(faq => {
+                faq.querySelector(".faq-question").addEventListener("click", () => {
+                    faq.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

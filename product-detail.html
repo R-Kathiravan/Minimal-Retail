@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - Minimal Retail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="product-detail.css" />
+    <link rel="stylesheet" href="shared.css" />
+</head>
+
+<body>
+    <div class="menu-header">
+        <div class="menu">
+            <a href="index.html" class="logo"><img src="./assets/stackly-logo1.png" alt="stackly-logo"></a>
+            <div class="menu-items">
+                <a href="index.html">Home </a>
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <div class="menu-icons-items">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="material-icons">login</span>
+                </div>
+                <div class="btn-close">X</div>
+            </div>
+            <div class="menu-icons">
+                <a href="cart.html" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span id="cart-count">0</span>
+                </a>
+                <span class="material-icons">login</span>
+            </div>
+            <div class="hamburger">
+                &#9776
+            </div>
+        </div>
+    </div>
+
+    <section class="product-details" id="product-details">
+        <div class="product-wrapper" id="product-wrapper">
+
+            <div class="product-visuals">
+                <div class="main-image">
+                    <img id="product-img" src="" alt="Product Image" />
+                </div>
+                <div class="thumbs">
+                    <img id="product-img-2" src="" alt="Product thumb 2" />
+                    <img id="product-img-3" src="" alt="Product thumb 3" />
+                </div>
+            </div>
+
+            <div class="product-summary glass-card">
+                <h1 id="product-name">Product Name</h1>
+                <p class="price" id="product-price">₹0</p>
+                <p id="product-desc" class="product-desc"></p>
+
+                <div class="quantity-controls">
+                    <button onclick="decreaseQty()">-</button>
+                    <span id="quantity">1</span>
+                    <button onclick="increaseQty()">+</button>
+                </div>
+
+                <button class="cta" onclick="addToCart()">
+                    <span class="material-icons">shopping_cart</span>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="specs glass-card">
+            <h2>Specifications</h2>
+            <ul id="product-specs-list"></ul>
+        </div>
+
+        <div class="reviews glass-card">
+            <h2>Customer Reviews</h2>
+            <ul id="product-customer-review"></ul>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Stackly</h3>
+                <p>Delivering innovation through simplicity. Explore premium electronics crafted for performance,
+                    quality, and style.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <p><span class="material-icons">call</span> +91 98765 43210</p>
+                <p><span class="material-icons">email</span> info@thestackly.com</p>
+                <p><span class="material-icons">location_on</span> Salem, India</p>
+            </div>
+            <div class="footer-section social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><span class="material-icons">facebook</span></a>
+                    <a href="#"><span class="material-icons">alternate_email</span></a>
+                    <a href="#"><span class="material-icons">smart_display</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Stackly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="shared.js"></script>
+
+</body>
+
+</html>
