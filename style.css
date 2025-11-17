@@ -783,3 +783,28 @@ header {
     top: -20px;
     color: rgb(255, 99, 125);
 }
+
+.home-select {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.home-nav {
+    position: relative;
+}
+
+.home-nav:hover .home-select {
+    display: block;
+}
+
+@media (max-width:768px) {
+    .home-select {
+        left: 10% !important;
+    }
+}

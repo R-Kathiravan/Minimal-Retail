@@ -803,7 +803,7 @@ function addToCart() {
 
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
-    alert(`${product.name} added to cart!`);
+    showToast(`${product.name} added to cart!`,"success");
 }
 
 function loadCart() {
@@ -846,7 +846,7 @@ function removeItem(index) {
 }
 
 function checkout() {
-    alert("Thank you for shopping with Minimal Retail!");
+    showToast("Thank you for shopping with Minimal Retail!","success");
     localStorage.removeItem("cart");
     window.location.href = "404page.html";
 }
@@ -879,3 +879,41 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCart();
     updateCartCount();
 });
+
+function openFS(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) {
+        img.webkitRequestFullscreen();
+    }
+}
+
+function openFullImage(src) {
+    const modal = document.getElementById("imgModal");
+    const fullImg = document.getElementById("fullImg");
+
+    fullImg.src = src;
+    modal.style.display = "block";
+}
+
+document.querySelector(".close-btn").addEventListener("click", function () {
+    document.getElementById("imgModal").style.display = "none";
+});
+
+function showToast(message, type = "default") {
+    const toast = document.getElementById("toast");
+
+     toast.textContent = message;
+
+     if (type === "success") toast.style.background = "#28a745";
+    else if (type === "error") toast.style.background = "#dc3545";
+    else if (type === "info") toast.style.background = "#007bff";
+    else toast.style.background = "#333";
+
+     toast.classList.add("show");
+
+     setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+}
+

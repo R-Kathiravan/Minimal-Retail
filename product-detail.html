@@ -53,11 +53,11 @@
 
             <div class="product-visuals">
                 <div class="main-image">
-                    <img id="product-img" src="" alt="Product Image" />
+                    <img id="product-img" src="" alt="Product Image" onclick="openFullImage(this.src)" />
                 </div>
                 <div class="thumbs">
-                    <img id="product-img-2" src="" alt="Product thumb 2" />
-                    <img id="product-img-3" src="" alt="Product thumb 3" />
+                    <img id="product-img-2" src="" alt="Product thumb 2" onclick="openFullImage(this.src)" " />
+                    <img id="product-img-3" src="" alt="Product thumb 3" onclick="openFullImage(this.src)" />
                 </div>
             </div>
 
@@ -90,6 +90,12 @@
         </div>
     </section>
 
+    <div id="imgModal" class="img-modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="fullImg">
+    </div>
+
+    <div id="toast"></div>
 
     <footer class="footer">
         <div class="footer-content">
