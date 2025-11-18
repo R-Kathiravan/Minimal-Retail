@@ -1,6 +1,7 @@
 .pricing-section {
     padding: 80px 5%;
     border-bottom: 1px solid var(--color-border);
+    overflow-x: hidden;
 }
 
 .pricing-container {
@@ -59,6 +60,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     align-items: stretch;
+    overflow-x: hidden;
 }
 
 .pricing-card {
@@ -198,6 +200,7 @@
 .faq-section {
     padding: 80px 5%;
     background-color: #FFFFFF;
+    overflow-x: hidden;
 }
 
 .faq-container {
