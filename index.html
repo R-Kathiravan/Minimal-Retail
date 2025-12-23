@@ -13,24 +13,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- <header>
-        <div class="offer-strip">
-            <div class="scrolling-text">
-                Big Diwali Sale! Get <b>20% OFF</b> on all electronics - Laptops, Mobiles & Accessories!
-                | Free Shipping on orders above ₹999 | Secure Payments | Limited Period Offer!
-            </div>
-        </div>
+    <div id="split-loader">
+        <div class="loader-panel panel-top"></div>
+        <div class="loader-panel panel-bottom"></div>
 
-    </header> -->
+        <div class="loader-content-box">
+            <h1 class="loader-title">STACKLY</h1>
+            <p class="loader-subtitle">Crafted for Retail</p>
+        </div>
+    </div>
+    <div class="top-bar">
+        <p>Free Shipping on all orders over ₹999 | Use Code: <b>STACKLY20</b></p>
+    </div>
     <div class="menu-header">
         <div class="menu">
             <a href="index.html" class="logo"><img src="./assets/stackly-logo1.webp" alt="stackly-logo"></a>
             <div class="menu-items">
                 <div class="home-nav">
-                    <a href="index.html" class="home-btn">Home</a>
+                    <a href="index.html" class="home-btn active">Home</a>
 
                     <span class="material-icons dropdown-icon" id="homeDropdownBtn">
                         expand_more
@@ -52,18 +58,18 @@
                     </a><br>
                     <a href="login.html">
                         Login
-                        <span class="material-icons">login</span>
+                        <span class="material-icons">person_outline</span>
                     </a>
                 </div>
                 <div class="btn-close"><span class="material-icons">close</span></div>
             </div>
             <div class="menu-icons">
                 <a href="cart.html" class="cart-link">
-                    <span class="material-icons">shopping_cart</span>
-                    <span id="cart-count">0</span>
+                    <span class="material-icons">shopping_bag</span>
+                    <span class="cart-count" id="cart-count">0</span>
                 </a>
                 <a href="login.html">
-                    <span class="material-icons">login</span>
+                    <span class="material-icons">person_outline</span>
                 </a>
             </div>
             <div class="hamburger">
@@ -105,7 +111,28 @@
             <span class="dot" data-slide="2"></span>
         </div>
     </section>
+    <div class="brand-strip">
+        <span class="brand-logo"><img src="./assets/brand-oppo.webp" alt="Brand LOGO"></span>
+        <span class="brand-logo"><img src="./assets/brand-vivo.webp" alt="Brand LOGO"></span>
+        <span class="brand-logo"><img src="./assets/brand-hp.webp" alt="Brand LOGO"></span>
+        <span class="brand-logo"><img src="./assets/brand-samsung.webp" alt="Brand LOGO"></span>
+        <span class="brand-logo"><img src="./assets/brand-asus.webp" alt="Brand LOGO"></span>
+    </div>
 
+    <section class="value-section">
+        <div class="value-text">
+            <h2>Minimalist Design.<br>Maximum Power.</h2>
+            <p>At Stackly, we don't just sell electronics; we curate a lifestyle. We believe that the tools you use
+                everyday should be beautiful, intuitive, and powerful.</p>
+            <p>Every product in our catalog is hand-picked for its build quality, aesthetic appeal, and technical
+                performance.</p>
+            <a href="about.html" class="btn-outline"
+                style="padding: 10px 25px; display:inline-block; margin-top:10px;">Read Our Story</a>
+        </div>
+        <div class="value-image">
+            <img src="./assets/home-lap.webp" alt="Minimal Desk" style="border-radius: 4px;">
+        </div>
+    </section>
     <section class="featured-products">
 
         <h2 class="section-title">Featured Products</h2>
@@ -113,7 +140,7 @@
         <div class="product-grid" data-aos="fade">
 
             <a href="product-detail.html?id=1" class="product-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="product-image-container">
+                <div class="image-box">
                     <img src="./assets/products-mobile.webp" alt="Minimalist Watch">
                 </div>
                 <h3>Smartphone X2</h3>
@@ -121,7 +148,7 @@
             </a>
 
             <a href="product-detail.html?id=18" class="product-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="product-image-container">
+                <div class="image-box">
                     <img src="./assets/products-keyboard.webp" alt="Sleek Mechanical Keyboard">
                 </div>
                 <h3>Mechanical Keyboard</h3>
@@ -129,11 +156,21 @@
             </a>
 
             <a href="product-detail.html?id=11" class="product-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="product-image-container">
+                <div class="image-box">
                     <img src="./assets/products-headphones.webp" alt="Wireless Over-Ear Headphones">
                 </div>
                 <h3> Noise Cancelling Headphones</h3>
                 <p class="product-price">₹ 320.00</p>
+            </a>
+            <a href="product.html" class="product-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="image-box" style="background: #e9ecef; display:flex; flex-direction:column;">
+                    <span class="material-icons" style="font-size: 3rem; color: #ccc;">arrow_forward</span>
+                    <p style="margin-top:10px; color:#888;">View All</p>
+                </div>
+                <div class="product-info" style="padding: 15px;">
+                    <h3>Explore Collection</h3>
+                    <p class="product-price">Show All</p>
+                </div>
             </a>
 
         </div>
@@ -159,60 +196,103 @@
             </a>
         </div>
     </section>
-    <section class="value-proposition">
 
-        <div class="value-text-content" data-aos="zoom-in" data-aos-delay="200">
-            <h2>About Stackly</h2>
-            <p>
-                At <strong>Stackly</strong>, we believe that technology should make life simpler,
-                smarter, and more stylish.
-                Our mission is to deliver high-quality electronics with a focus on minimal design, exceptional
-                performance, and user comfort.
-            </p>
-            <p>
-                From powerful laptops to next-generation smartwatches, our products are crafted to complement your
-                modern lifestyle.
-                We combine innovation with elegance to create devices that not only perform well but also look
-                beautiful.
-            </p>
-            <p class="tagline">
-                <em>Less clutter. More power. Pure performance.</em>
-            </p>
-        </div>
-
-        <div class="value-image-container" data-aos="zoom-out" data-aos-delay="300">
-            <img src="./assets/home-lap.webp" alt="A clean, minimal desk setup with a laptop and coffee">
-        </div>
-
-    </section>
-    <section class="why-choose-us" data-aos="fade">
-        <h2>Why Choose Us</h2>
+    <section class="why-choose-us" style="background: white;">
+        <h2 class="section-header">Why Choose US</h2>
         <div class="features">
-            <div class="feature-box" data-aos="fade" data-aos-delay="200">
+            <div class="feature-box">
                 <span class="material-icons">bolt</span>
-                <h3>Latest Technology</h3>
-                <p>We bring you the most advanced and innovative electronics that redefine modern living.</p>
+                <h3>Future Ready</h3>
+                <p>Latest specs and innovation.</p>
             </div>
-
-            <div class="feature-box" data-aos="fade" data-aos-delay="200">
-                <span class="material-icons">verified</span>
-                <h3>Quality Guaranteed</h3>
-                <p>Each product goes through strict quality checks to ensure premium performance and durability.</p>
+            <div class="feature-box">
+                <span class="material-icons">verified_user</span>
+                <h3>Warranty Included</h3>
+                <p>1-year coverage on all items.</p>
             </div>
-
-            <div class="feature-box" data-aos="fade" data-aos-delay="200">
+            <div class="feature-box">
                 <span class="material-icons">local_shipping</span>
-                <h3>Fast Delivery</h3>
-                <p>Experience quick and reliable doorstep delivery with real-time order tracking.</p>
+                <h3>Express Shipping</h3>
+                <p>Delivery within 3-5 days.</p>
             </div>
-
-            <div class="feature-box" data-aos="fade" data-aos-delay="200">
-                <span class="material-icons">support_agent</span>
-                <h3>24/7 Support</h3>
-                <p>Our customer service team is always available to assist you — anytime, anywhere.</p>
+            <div class="feature-box">
+                <span class="material-icons">headset_mic</span>
+                <h3>Expert Support</h3>
+                <p>Tech support available 24/7.</p>
             </div>
         </div>
     </section>
+    <section class="testimonials">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Stories from the Community</h2>
+            <p>Join 10,000+ creators who upgraded their setup.</p>
+        </div>
+
+        <div class="testimonial-grid">
+            <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                    "I was skeptical about ordering electronics online, but Stackly's packaging and build quality blew
+                    me away. The mechanical keyboard is a dream to type on."
+                </p>
+                <div class="reviewer">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <div class="reviewer-info">
+                        <h4>Arjun Mehta</h4>
+                        <span>Software Engineer, Bangalore</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                    "The minimal aesthetic is exactly what I needed for my home office. Shipping was incredibly fast,
+                    and the customer support team helped me pick the right laptop."
+                </p>
+                <div class="reviewer">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                    <div class="reviewer-info">
+                        <h4>Sarah Jenkins</h4>
+                        <span>Graphic Designer, Mumbai</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="review-text">
+                    "Premium quality without the absurd markup. The noise-cancelling headphones compare easily to top
+                    brands that cost twice as much. Highly recommended."
+                </p>
+                <div class="reviewer">
+                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="User">
+                    <div class="reviewer-info">
+                        <h4>David Chen</h4>
+                        <span>Architect, Delhi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="newsletter" data-aos="fade-up">
+        <h2>Join the Inner Circle</h2>
+        <p>Subscribe for exclusive drops, early access, and tech tips.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address">
+            <button type="button">SUBSCRIBE</button>
+        </form>
+    </section>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section about" data-aos="fade-up" data-aos-delay="200">
@@ -231,8 +311,9 @@
             </div>
             <div class="footer-section contact" data-aos="fade-up" data-aos-delay="400">
                 <h4>Contact Us</h4>
-                <p><span class="material-icons">call</span> +91 98765 43210</p>
-                <p><span class="material-icons">email</span> info@thestackly.com</p>
+                <a href="tel: +91 9876543210"> <span class="material-icons">call</span> +91 98765 43210</a><br><br>
+                <a href="mailto: info@thestackly.com"><span class="material-icons">email</span>
+                    info@thestackly.com</a><br><br>
                 <p><span class="material-icons">location_on</span> Salem, India</p>
             </div>
             <div class="footer-section social" data-aos="fade-up" data-aos-delay="500">
@@ -252,8 +333,8 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800
-            // once: true
+            duration: 800,
+            once: true
         });
     </script>
     <script>
@@ -323,6 +404,20 @@
                 homeDropdown.classList.remove("show");
                 icon.classList.remove("rotate");
             }
+        });
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("split-loader");
+
+            setTimeout(function () {
+                loader.classList.add("loader-finish");
+
+                setTimeout(function () {
+                    if (document.body.contains(loader)) {
+                        document.body.removeChild(loader);
+                    }
+                }, 800);
+
+            }, 1000);
         });
     </script>
 </body>

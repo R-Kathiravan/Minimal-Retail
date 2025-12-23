@@ -25,7 +25,7 @@ function updateCartCount() {
   if (!countEl) return;
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  countEl.textContent = cart.length > 0 ? cart.length : '';
+  countEl.textContent = cart.length;
   console.log("Cart count updated:", cart.length);
 }
 

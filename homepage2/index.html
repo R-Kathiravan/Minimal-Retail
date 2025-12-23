@@ -14,16 +14,28 @@
 </head>
 
 <body>
-    <header>
+    <div id="saas-loader">
+        <div class="loader-wrapper">
+            <div class="loader-brand">STACKLY<span class="dot">.</span></div>
+
+            <div class="loader-status">
+                <div class="loader-counter">0%</div>
+                <div class="loader-bar-bg">
+                    <div class="loader-bar-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header id="header">
         <div class="head-items">
             <div class="head-logo">
                 <a href="index.html"><img src="./assets/stackly-logo.webp" class="logo"></a>
             </div>
             <div class="menu-items">
                 <div class="home-nav">
-                    <a href="index.html" class="home-btn">Home</a>
+                    <a href="index.html" class="home-btn active">Home</a>
 
-                    <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                    <span class="material-icons dropdown-icon active" id="homeDropdownBtn">
                         expand_more
                     </span>
 
@@ -36,14 +48,14 @@
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
                 <div class="hide-head-btn">
-                    <a href="login-signup.html">Login/SignUp</a>
+                    <a href="login-signup.html">Login</a>
                     <a href="pricing.html">Get Started</a>
                     <div class="btn-close"><span class="material-icons">close</span></div>
                 </div>
             </div>
             <div class="head-btn">
-                <a href="login-signup.html">Login/SignUp</a>
-                <a href="pricing.html">Get Started</a>
+                <a href="login-signup.html" class="head-btn1">Login</a>
+                <a href="pricing.html" class="head-btn2">Get Started</a>
             </div>
             <div class="hamburger">
                 <span class="material-icons">menu</span>
@@ -52,99 +64,113 @@
     </header>
 
     <section class="saas-hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow-spot"></div>
+
         <div class="hero-content">
             <div class="hero-left">
 
+                <div class="hero-label">PLATFORM OVERVIEW</div>
                 <nav class="hero-tabs" data-aos="fade-up">
                     <button class="hero-tab-btn active" data-tab="1">
-                        <span class="material-icons">dashboard</span>
-                        Beautiful Dashboard
+                        <div class="tab-icon"><span class="material-icons">dashboard</span></div>
+                        <div class="tab-info">
+                            <span class="tab-title">Dashboard</span>
+                            <!-- <span class="tab-desc">Overview</span> -->
+                        </div>
                     </button>
                     <button class="hero-tab-btn" data-tab="2">
-                        <span class="material-icons">inventory_2</span>
-                        Smart Inventory
+                        <div class="tab-icon"><span class="material-icons">inventory_2</span></div>
+                        <div class="tab-info">
+                            <span class="tab-title">Inventory</span>
+                            <!-- <span class="tab-desc">Real-time sync</span> -->
+                        </div>
                     </button>
                     <button class="hero-tab-btn" data-tab="3">
-                        <span class="material-icons">bar_chart</span>
-                        Simple Analytics
+                        <div class="tab-icon"><span class="material-icons">insights</span></div>
+                        <div class="tab-info">
+                            <span class="tab-title">Analytics</span>
+                            <!-- <span class="tab-desc">Growth data</span> -->
+                        </div>
                     </button>
                 </nav>
 
                 <div class="hero-text-container">
-
-                    <div class="hero-text active" data-content="1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="hero-text active" data-content="1">
                         <h1 class="hero-headline">
-                            The All-in-One Platform
-                            <br>
-                            for <span class="highlight">Electronics Retail</span>
+                            Command Center <br> for <span class="highlight-anim">Modern Retail.</span>
                         </h1>
-                        <!-- <p class="hero-subheadline">
-                        Manage your inventory, process payments, and launch your curated
-                        store from one beautiful, powerful dashboard.
-                    </p> -->
+                        <p class="hero-sub">Manage sales, orders, and payments from one beautiful interface designed for
+                            speed.</p>
                     </div>
 
                     <div class="hero-text" data-content="2">
                         <h1 class="hero-headline">
-                            Sync Your Stock
-                            <br>
-                            with <span class="highlight">Smart Inventory</span>
+                            Inventory that <br> <span class="highlight-anim">Updates Instantly.</span>
                         </h1>
-                        <!-- <p class="hero-subheadline">
-                        Finally, your online store and your physical POS are
-                        perfectly in sync. Never oversell again.
-                    </p> -->
+                        <p class="hero-sub">Sync online and offline stock in milliseconds. Set automated low-stock
+                            alerts.</p>
                     </div>
 
                     <div class="hero-text" data-content="3">
                         <h1 class="hero-headline">
-                            Find What Sells
-                            <br>
-                            with <span class="highlight">Simple Analytics</span>
+                            Data Driven <br> <span class="highlight-anim">Decision Making.</span>
                         </h1>
-                        <!-- <p class="hero-subheadline">
-                        No more confusing charts. See your top-selling products
-                        and customer trends in one clean, simple view.
-                    </p> -->
+                        <p class="hero-sub">Visualize revenue streams and customer retention without complex
+                            spreadsheets.</p>
                     </div>
-
                 </div>
 
-                <div class="hero-cta-group" data-aos="fade-down">
-                    <a href="login-signup.html?view=signup" class="cta-button primary">
-                        Start Your 14-Day Free Trial
-                        <span class="material-icons">arrow_forward</span>
+                <div class="hero-cta-group">
+                    <a href="login-signup.html" class="cta-button primary">
+                        Start Free Trial <span class="material-icons">arrow_forward</span>
                     </a>
                     <a href="booknow.html" class="cta-button secondary">
-                        Book a Demo
+                        View Demo
                     </a>
                 </div>
             </div>
-            <div class="hero-product-shot-container" data-aos="fade-right">
-                <div class="hero-product-shot active" data-content="1">
-                    <div class="browser-frame">
-                        <img src="./assets/hero-dashboard.webp" alt="Minimal Retail SaaS Dashboard">
-                    </div>
-                </div>
 
-                <div class="hero-product-shot" data-content="2">
-                    <div class="browser-frame">
-                        <img src="./assets/hero-inventory.webp" alt="Smart Inventory UI">
-                    </div>
-                </div>
+            <div class="hero-visual-right">
+                <div class="visual-stage">
 
-                <div class="hero-product-shot" data-content="3">
-                    <div class="browser-frame">
-                        <img src="./assets/hero-analytics.webp" alt="Simple Analytics UI">
+                    <div class="hero-product-card active" data-content="1">
+                        <div class="glass-panel">
+                            <div class="window-controls"><span></span><span></span><span></span></div>
+                            <img src="./assets/hero-dashboard.webp" alt="Dashboard">
+                            <div class="floating-badge" style="top: 20%; right: -20px;">
+                                <span class="material-icons" style="color: #4ade80;">trending_up</span> +24% Sales
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="hero-product-card" data-content="2">
+                        <div class="glass-panel">
+                            <div class="window-controls"><span></span><span></span><span></span></div>
+                            <img src="./assets/hero-inventory.webp" alt="Inventory">
+                            <div class="floating-badge" style="bottom: 20%; left: -20px;">
+                                <span class="material-icons" style="color: #facc15;">warning</span> Low Stock Alert
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-product-card" data-content="3">
+                        <div class="glass-panel">
+                            <div class="window-controls"><span></span><span></span><span></span></div>
+                            <img src="./assets/hero-analytics.webp" alt="Analytics">
+                            <div class="floating-badge" style="top: 10%; left: -10px;">
+                                <span class="material-icons" style="color: #3b82f6;">group</span> New Users
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
         </div>
     </section>
     <section class="social-proof" data-aos="fade-up">
         <div class="proof-container">
-            <p class="proof-title">Trusted by the world's best modern brands</p>
+            <p class="proof-title head">Trusted by the world's best modern brands</p>
 
             <div class="logos-grid">
                 <img src="./assets/trust-google-logo.webp" alt="Brand Logo" data-aos="fade-up" data-aos-delay="100">
@@ -159,7 +185,7 @@
 
     <section class="core-features" data-aos="fade-down">
         <div class="features-container">
-            <h2 class="features-headline">A Simpler Way to Run Your Store</h2>
+            <h2 class="features-headline head">A Simpler Way to Run Your Store</h2>
             <p class="features-subheadline">
                 Our platform is built on three core principles to help you succeed.
                 Everything you need, and nothing you don't.
@@ -204,7 +230,7 @@
     <section class="product-how-to" data-aos="zoom-in">
         <div class="how-to-container">
 
-            <h2 class="how-to-headline">No Clutter. Just Clarity.</h2>
+            <h2 class="how-to-headline head">No Clutter. Just Clarity.</h2>
             <p class="how-to-subheadline">
                 We designed our platform to get out of your way. See how our core
                 features help you manage your business faster.
@@ -281,7 +307,7 @@
     </section>
     <section class="pricing-section" data-aos="fade" data-aos-delay="300">
         <div class="pricing-container">
-            <h2 class="pricing-headline">Simple, Transparent Pricing</h2>
+            <h2 class="pricing-headline head">Simple, Transparent Pricing</h2>
             <p class="pricing-subheadline">
                 Choose the plan that's right for your business.
                 All plans start with a 14-day free trial. No credit card required.
@@ -352,7 +378,7 @@
 
     <section class="final-cta">
         <div class="cta-container" data-aos="zoom-out">
-            <h2 class="cta-headline">Ready to Simplify Your Retail?</h2>
+            <h2 class="cta-headline head">Ready to Simplify Your Retail?</h2>
             <p class="cta-subheadline">
                 Start your 14-day free trial today. No credit card required.
                 Cancel anytime.
@@ -380,6 +406,7 @@
                 <div class="footer-section" data-aos="fade-down" data-aos-delay="200">
                     <h4>Pages</h4>
                     <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="features.html">Features</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="about.html">About Us</a></li>
@@ -425,9 +452,14 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800
-            // once: true
+            duration: 800,
+            easing: 'ease-out-cubic',
+            offset: 120,
+            delay: 50,
+            once: true,
+            anchorPlacement: 'top-bottom'
         });
+
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -533,6 +565,33 @@
             }
 
         });
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll('.hero-tab-btn');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all
+                    document.querySelectorAll('.hero-tab-btn, .hero-text, .hero-product-card').forEach(el => el.classList.remove('active'));
+
+                    // Add active to clicked tab
+                    tab.classList.add('active');
+
+                    // Activate content
+                    const id = tab.getAttribute('data-tab');
+                    document.querySelector(`.hero-text[data-content="${id}"]`).classList.add('active');
+                    document.querySelector(`.hero-product-card[data-content="${id}"]`).classList.add('active');
+                });
+            });
+
+            // Optional: Auto-rotate tabs every 5 seconds
+            let currentTab = 1;
+            setInterval(() => {
+                currentTab = currentTab < 3 ? currentTab + 1 : 1;
+                // Find button with this data-tab and click it
+                const nextBtn = document.querySelector(`.hero-tab-btn[data-tab="${currentTab}"]`);
+                if (nextBtn) nextBtn.click();
+            }, 6000);
+        });
         const homeDropdownBtn = document.getElementById("homeDropdownBtn");
         const homeDropdown = document.getElementById("homeDropdown");
         const icon = document.querySelector(".dropdown-icon");
@@ -548,6 +607,34 @@
             }
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loader = document.getElementById('saas-loader');
+            const bar = document.querySelector('.loader-bar-fill');
+            const counter = document.querySelector('.loader-counter');
+            let width = 0;
+            const interval = setInterval(() => {
+                const increment = Math.floor(Math.random() * 5) + 1;
+                width += increment;
+                if (width >= 100) {
+                    width = 100;
+                    clearInterval(interval);
+                    bar.style.width = width + '%';
+                    counter.innerText = width + '%';
+                    setTimeout(() => {
+                        loader.classList.add('loader-complete');
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                        }, 800);
+                    }, 500);
+                } else {
+                    bar.style.width = width + '%';
+                    counter.innerText = width + '%';
+                }
+            }, 30);
+        });
+    </script>
+
 </body>
 
 
