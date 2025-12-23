@@ -239,9 +239,9 @@
                     me away. The mechanical keyboard is a dream to type on."
                 </p>
                 <div class="reviewer">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <img src="./assets/person1.webp" alt="User">
                     <div class="reviewer-info">
-                        <h4>Arjun Mehta</h4>
+                        <h4>Arun</h4>
                         <span>Software Engineer, Bangalore</span>
                     </div>
                 </div>
@@ -257,9 +257,9 @@
                     and the customer support team helped me pick the right laptop."
                 </p>
                 <div class="reviewer">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                    <img src="./assets/person2.webp" alt="User">
                     <div class="reviewer-info">
-                        <h4>Sarah Jenkins</h4>
+                        <h4>Sherya</h4>
                         <span>Graphic Designer, Mumbai</span>
                     </div>
                 </div>
@@ -275,24 +275,28 @@
                     brands that cost twice as much. Highly recommended."
                 </p>
                 <div class="reviewer">
-                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="User">
+                    <img src="./assets/person3.webp" alt="User">
                     <div class="reviewer-info">
-                        <h4>David Chen</h4>
+                        <h4>David </h4>
                         <span>Architect, Delhi</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="newsletter" data-aos="fade-up">
+    <section class="newsletter">
         <h2>Join the Inner Circle</h2>
         <p>Subscribe for exclusive drops, early access, and tech tips.</p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email address">
-            <button type="button">SUBSCRIBE</button>
+
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="input-group">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </div>
+
+            <small class="form-message" id="formMessage"></small>
         </form>
     </section>
-
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section about" data-aos="fade-up" data-aos-delay="200">
@@ -419,6 +423,43 @@
 
             }, 1000);
         });
+        const form = document.getElementById("newsletterForm");
+        const emailInput = document.getElementById("newsletterEmail");
+        const message = document.getElementById("formMessage");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+            message.className = "form-message";
+
+            if (!email) {
+                alert("Please enter your email address.");
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // showSuccess("You're in! Thanks for subscribing.");
+            emailInput.value = "";
+        });
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function showError(text) {
+            message.textContent = text;
+            message.classList.add("error");
+        }
+
+        function showSuccess(text) {
+            message.textContent = text;
+            window.location.href = '404page.html';
+        }
     </script>
 </body>
 

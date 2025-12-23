@@ -974,9 +974,9 @@ footer {
 
 .testimonials {
     position: relative;
-    background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');
+    background-image: url('./assets/testimonial-bg.webp');
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');
+        url('./assets/testimonial-bg.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1106,11 +1106,9 @@ footer {
 .newsletter-form input {
     padding: 18px 25px;
     flex-grow: 1;
-    /* Makes input take up available space */
     border: none;
     outline: none;
     border-radius: 4px;
-    /* Soft edges */
     font-family: inherit;
     font-size: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -1134,6 +1132,24 @@ footer {
     color: var(--accent);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-message {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-message.error {
+    color: #dc2626;
+    opacity: 1;
+}
+
+.form-message.success {
+    color: #16a34a;
+    opacity: 1;
 }
 
 @media (max-width: 600px) {
