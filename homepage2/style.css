@@ -79,9 +79,12 @@ header {
 }
 
 header.scrolled {
-    background: rgba(255, 255, 255, 0.95) !important;
+    /* background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05); */
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .head-items {
@@ -126,7 +129,7 @@ header.scrolled {
 }
 
 header.scrolled .menu-items a {
-    color: var(--color-text-light) !important;
+    color: #ddd;
 }
 
 header.scrolled .menu-items a:hover {
@@ -267,7 +270,7 @@ header.scrolled .menu-items a:hover {
     }
 
     header.scrolled .hamburger {
-        color: #020202;
+        color: #ffffff;
     }
 
     .menu-items.show {
@@ -443,6 +446,16 @@ header.scrolled .head-btn2:hover {
 @media (max-width:468px) {
     .hero-cta-group {
         margin-top: 120px !important;
+    }
+
+    .hero-tab-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin-left: 50px; */
+    }
+    .saas-hero{
+        padding-left: 20px;
     }
 }
 
